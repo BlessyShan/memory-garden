@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#080b18" />
+  <meta name="description" content="Memory Garden — an interactive generative art experience shaped by your presence and gestures." />
+  <title>Memory Garden — Interactive Generative Art</title>
+</head>
+<body>
+  <main id="app">
+    <canvas id="garden" aria-label="Interactive generative garden"></canvas>
+    <video id="camera" playsinline muted></video>
+    <div class="vignette"></div>
+    <header class="topbar">
+      <div><div class="eyebrow">INTERACTIVE GENERATIVE ART</div><h1>Memory <em>Garden</em></h1></div>
+      <div class="status"><span id="statusDot"></span><span id="statusText">Garden resting</span></div>
+    </header>
+    <section class="intro" id="intro"><p>Every presence changes a place.<br><span>Move gently. Stay awhile. Watch it grow.</span></p><button id="startBtn">Enter the garden <span>↗</span></button></section>
+    <aside class="controls">
+      <button id="cameraBtn" class="control">Enable camera</button>
+      <button id="soundBtn" class="control" aria-pressed="false">Sound: off</button>
+      <button id="resetBtn" class="control">Reset garden</button>
+    </aside>
+    <div class="hint" id="hint">Move your mouse or touch the screen to awaken flowers · Hold still to help them bloom</div>
+    <div class="camera-frame" id="cameraFrame"><span>Camera preview</span></div>
+    <footer><span>MEMORY GARDEN</span><span id="stats">0 blooms · 0% presence</span></footer>
+    <div class="permission" id="permission" role="status"></div>
+  </main>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
